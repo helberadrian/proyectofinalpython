@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+  <title>Blog de Helber</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="">
+        <img src="{% static 'blog/img/logo.png' %}" alt="Logo">
+      </a>
+    </div>
+    <div class="nav">
+      <a class="btn-nav" href="{% url 'inicio' %}">Inicio</a>
+      <a class="btn-nav" href="{% url 'about' %}">Sobre Mi</a>
+      
+      <!-- Login -->
+      {% if not request.user.is_authenticated %}
+        <a class="btn-nav" href="{% url 'login' %}">Login</a>
+        <a class="btn-nav" href="{% url 'registro' %}">Registro</a>
+      {% endif %}
+      {% if request.user.is_authenticated %}
+        <a class="btn-nav" href="{% url 'admin' %}">Administrar</a>
+        <a class="btn-nav" href="{% url 'logout' %}">Cerrar Sesión</a>
+        <p style="color: cornflowerblue;">Hola, {{ request.user }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  {% block contenidoCambia %}
+
+  {% endblock %}
+
+  <footer>
+    <div class="redes">
+      <img src="{% static 'blog/img/facebook.png' %}" alt="Facebook">
+      <img src="{% static 'blog/img/instagram.png' %}" alt="Instagram">
+      <img src="{% static 'blog/img/twitter.png' %}" alt="Twitter">
+      <img src="{% static 'blog/img/whatsapp.png' %}" alt="Whatsapp">
+    </div>
+    <div class="derechos">
+      <p>Derechos Reservados de Diseño a Helber Rodriguez</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <h1 class="titulo">Resultados de la Busqueda</h1>
+
+    <div>
+        {% if articulos %}
+        <div>
+            {% for articulo in articulos %}
+                <h3>Titulo: {{articulo.titulo}}</h3><br>
+                <p>{{articulo.resumen}}</p><br>
+                <a href="{% url 'detalle' articulo.id %}">
+                    <button>Regresar</button>
+                </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <br>
+    </div>
+    <a href="{% url 'inicio' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

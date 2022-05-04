@@ -1,0 +1,10 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <h3 class="titulo">No existen post en este momento...</h3><br>
+
+    <a class="btn" href="{% url 'inicio' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+    background-color: beige;
+}
+
+header {
+    height: 8rem;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    height: 10rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+}
+
+form input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+form input:hover {
+    background-color: aquamarine;
+}
+
+form table label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form table p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo a img {
+    height: 5rem;
+    padding: 2rem;
+}
+
+.btn-nav:hover {
+    color: aquamarine;
+}
+
+.nav a {
+    font-style: none;
+    text-decoration: none;
+    padding: 2rem;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+.titulo {
+    font-size: 3rem;
+    color: blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 1rem;
+}
+
+.articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.articulo {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.articulo h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.articulo img {
+    margin: 0.5rem;
+    max-height: 20rem;
+}
+
+.btn button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    background-color: gray;
+}
+
+.btn button:hover {
+    background-color: aquamarine;
+}
+
+.articulo_detalle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario table {
+    border: 1px black;
+    align-content: center;
+}
+
+.redes img {
+    height: 2rem;
+    padding: 1rem;
+}
+
+.derechos p {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+.btn-admin {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.btn-admin a img {
+    height: 8rem;
+    justify-content: center;
+}
+
+.btn-admin a h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    justify-content: center;
+}
+

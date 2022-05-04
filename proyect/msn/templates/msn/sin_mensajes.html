@@ -1,0 +1,13 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <h3 class="titulo">No existen comentarios en este momento...</h3><br>
+
+    <a class="btn" href="{% url 'nuevoMensaje' %}">
+        <button>Agregar Comentario</button>
+    </a>
+    <a class="btn" href="{% url 'todos' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

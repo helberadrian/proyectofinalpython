@@ -1,0 +1,13 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <div class="sobremi">
+        <h1 class="titulo">Sobre Mi</h1>
+        <p>Mi nombre es Helber Rodriguez, trabajo en Telecom Argentina SA, tengo 32 años y tambien estudio programación backend.</p>
+
+        <a class="btn" href="{% url 'inicio' %}">
+            <button>Regresar</button>
+        </a>
+    </div>
+{% endblock %}

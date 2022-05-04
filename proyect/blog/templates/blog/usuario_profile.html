@@ -1,0 +1,12 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <div>
+        <p>Usuario: {{ usuario }}</p>
+        <p>Email: {{ email }}</p>
+        <a class="btn" href="{% url 'editarUsuario'%}">
+            <button>Editar</button>
+        </a>
+    </div>
+{% endblock %}

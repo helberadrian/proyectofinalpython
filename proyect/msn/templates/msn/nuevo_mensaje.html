@@ -1,0 +1,18 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <h1 class="titulo">Nuevo Mensaje</h1>
+    <br>
+
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+        </table>
+        <input type="submit", value="Agregar">
+    </form>
+
+    <a class="btn" href="{% url 'todos' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

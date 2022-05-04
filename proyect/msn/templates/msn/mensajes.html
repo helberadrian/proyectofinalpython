@@ -1,0 +1,28 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <div class="mensajes">
+        <h3>Comentarios:</h3>
+        {% if not request.user.is_authenticated %}
+            <p>Debes estar logueado para poder comentar...</p>
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+            <a class="btn" href="{% url 'nuevoMensaje' %}">
+                <button>Agregar Comentario</button>
+            </a>
+
+            <div>
+                {% for m in mensajes %}
+                    <p>{{ m.mensaje }}</p>
+                    <p><i>{{ m.fecha }}</i></p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <a class="btn" href="{% url 'todos' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

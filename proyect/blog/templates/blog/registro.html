@@ -1,0 +1,18 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <h1 class="titulo">Registro</h1>
+    <br>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <input type="submit", value="Registrate">
+    </form>
+
+    <a class="btn" href="{% url 'inicio' %}">
+        <button>Regresar</button>
+    </a>
+{% endblock %}

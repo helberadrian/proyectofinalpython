@@ -1,0 +1,23 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <div class="btn-admin">
+        <a href="{% url 'nuevo' %}">
+            <img src="{% static 'blog/img/article.png' %}" alt="Crear Articulo">
+            <h3>Crear Articulo</h1>
+        </a>
+    </div>
+    <div class="btn-admin">
+        <a href="{% url 'perfil' %}">
+            <img src="{% static 'blog/img/user.png' %}" alt="Perfil de Usuario">
+            <h3>Perfil de Usuario</h1>
+        </a>
+    </div>
+    <div class="btn-admin">
+        <a href="{% url 'editarUsuario' %}">
+            <img src="{% static 'blog/img/edituser.png' %}" alt="Editar Usuario">
+            <h3>Editar Usuario</h1>
+        </a>
+    </div>
+{% endblock %}

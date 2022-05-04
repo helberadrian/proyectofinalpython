@@ -1,0 +1,33 @@
+{% extends "blog/padre.html" %}
+{% load static %}
+
+{% block contenidoCambia %}
+    <!-- Por alguna razón que no comprendo, no lee el archivo CSS -->
+    <div class="articulos">
+    {% for a in articulos %}
+        <div class="articulo">
+            <h2>{{a.titulo}}</h1>
+            <img src="{{ a.imagen }}" alt="">
+            <p>{{a.resumen}}</p>
+            <a class="btn" href="{% url 'detalle' a.id %}">
+                <button>Seguir Leyendo...</button>
+            </a>
+            
+            {% if request.user.is_authenticated %}
+            <div>
+                <a class="btn" href="{% url 'eliminar' a.id %}">
+                    <button>Eliminar</button>
+                </a>
+                <a class="btn" href="{% url 'editar' a.id %}">
+                    <button>Modificar</button>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </div>
+
+    <a class="btn" href="{% url 'mensajes' %}">
+        <button>Ver Comentarios</button>
+    </a>
+{% endblock %}
